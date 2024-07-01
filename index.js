@@ -1,6 +1,12 @@
 const express = require('express');
 const path = require('path');
 
+// import routers
+const indexRouter = require("./routes/indexRouter");
+
+// import utils
+const startServer = require("./utils/startServer");
+
 const app = express();
 
 // middleware
@@ -9,13 +15,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 
-app.get('/', (req, res) => {
-    res.render('home');
-});
-
-
-// Start the server
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-});
+app.use("/", indexRouter); 
+ 
+// start server
+startServer(app);

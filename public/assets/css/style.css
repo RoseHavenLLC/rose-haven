@@ -1,26 +1,18 @@
-/**
-* Template Name: MeFamily
-* Template URL: https://bootstrapmade.com/family-multipurpose-html-bootstrap-template-free/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+@import url("palette.css");
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
 
 a {
-  color: #006fbe;
+  color: var(--primary);
   text-decoration: none;
 }
 
 a:hover {
-  color: #008df1;
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -43,7 +35,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #006fbe;
+  background: var(--primary);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -52,13 +44,13 @@ h6 {
 
 .back-to-top i {
   font-size: 24px;
-  color: #fff;
+  color: var(--white);
   line-height: 0;
 }
 
 .back-to-top:hover {
-  background: #0087e7;
-  color: #fff;
+  background: var(--secondary);
+  color: var(--white);
 }
 
 .back-to-top.active {
@@ -70,7 +62,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
+  background: var(--white);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
@@ -87,7 +79,7 @@ h6 {
 }
 
 #header .logo a {
-  color: #24325d;
+  color: var(--secondary);
 }
 
 #header .logo img {
@@ -141,7 +133,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #006fbe;
+  color: var(--primary);
 }
 
 .navbar .dropdown ul {
@@ -154,7 +146,7 @@ h6 {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
+  background: var(--white);
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
@@ -177,7 +169,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #006fbe;
+  color: var(--primary);
 }
 
 .navbar .dropdown:hover>ul {
@@ -213,7 +205,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #24325d;
+  color: var(--secondary);
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -222,7 +214,7 @@ h6 {
 }
 
 .mobile-nav-toggle.bi-x {
-  color: #fff;
+  color: var(--white);
 }
 
 @media (max-width: 991px) {
@@ -261,7 +253,7 @@ h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: var(--white);
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -270,13 +262,13 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #24325d;
+  color: var(--secondary);
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #006fbe;
+  color: var(--primary);
 }
 
 .navbar-mobile .getstarted,
@@ -292,7 +284,7 @@ h6 {
   z-index: 99;
   opacity: 1;
   visibility: visible;
-  background: #fff;
+  background: var(--white);
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
@@ -311,7 +303,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #006fbe;
+  color: var(--primary);
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -362,7 +354,7 @@ h6 {
 }
 
 #hero h2 {
-  color: #fff;
+  color: var(--white);
   margin-bottom: 20px;
   font-size: 48px;
   font-weight: 700;
@@ -371,7 +363,7 @@ h6 {
 #hero p {
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
-  color: #fff;
+  color: var(--white);
 }
 
 #hero .carousel-inner .carousel-item {
@@ -402,7 +394,7 @@ h6 {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50px;
   transition: 0.3s;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-light);
   width: 54px;
   height: 54px;
   display: flex;
@@ -413,13 +405,13 @@ h6 {
 #hero .carousel-control-next-icon:hover,
 #hero .carousel-control-prev-icon:hover {
   background: rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-light);
 }
 
 #hero .carousel-indicators li {
   list-style-type: none;
   cursor: pointer;
-  background: #fff;
+  background: var(--white);
   overflow: hidden;
   border: 0;
   width: 12px;
@@ -431,7 +423,7 @@ h6 {
 
 #hero .carousel-indicators li.active {
   opacity: 1;
-  background: #006fbe;
+  background: var(--primary);
 }
 
 #hero .btn-get-started {
@@ -444,13 +436,13 @@ h6 {
   border-radius: 4px;
   transition: 0.5s;
   line-height: 1;
-  color: #fff;
+  color: var(--white);
   animation-delay: 0.8s;
-  background: #006fbe;
+  background: var(--primary);
 }
 
 #hero .btn-get-started:hover {
-  background: #007ed8;
+  background: var(--primary);
 }
 
 @media (max-width: 992px) {
@@ -506,6 +498,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  color: var(--secondary);
 }
 
 .section-title h2::before {
@@ -525,7 +518,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #006fbe;
+  background: var(--primary);
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -561,7 +554,7 @@ section {
   left: 0;
   top: 2px;
   font-size: 20px;
-  color: #006fbe;
+  color: var(--primary);
   line-height: 1;
 }
 
@@ -579,15 +572,15 @@ section {
   border-radius: 5px;
   transition: 0.3s;
   line-height: 1;
-  color: #006fbe;
+  color: var(--primary);
   animation-delay: 0.8s;
   margin-top: 6px;
-  border: 2px solid #006fbe;
+  border: 2px solid var(--primary);
 }
 
 .about .content .btn-learn-more:hover {
-  background: #006fbe;
-  color: #fff;
+  background: var(--primary);
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -605,7 +598,7 @@ section {
   align-items: center;
   width: 80px;
   height: 80px;
-  background: #fff;
+  background: var(--white);
   border-radius: 50%;
   margin-bottom: 20px;
   transition: 0.5s;
@@ -615,7 +608,7 @@ section {
 
 .features .icon i {
   line-height: 0;
-  color: #006fbe;
+  color: var(--primary);
   font-size: 34px;
 }
 
@@ -637,7 +630,7 @@ section {
 }
 
 .features .title a:hover {
-  color: #006fbe;
+  color: var(--primary);
 }
 
 .features .title::after {
@@ -646,7 +639,7 @@ section {
   display: block;
   width: 50px;
   height: 2px;
-  background: #006fbe;
+  background: var(--primary);
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -671,13 +664,13 @@ section {
 .recent-photos .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #fff;
+  background-color: var(--white);
   opacity: 1;
   border: 1px solid #006fbe;
 }
 
 .recent-photos .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #006fbe;
+  background-color: var(--secondary);
 }
 
 .recent-photos .owl-nav,
@@ -687,8 +680,8 @@ section {
 }
 
 .recent-photos .owl-item {
-  border-left: 2px solid #fff;
-  border-right: 2px solid #fff;
+  border-left: 2px solid var(--white);
+  border-right: 2px solid var(--white);
 }
 
 .recent-photos .owl-dot {
@@ -701,7 +694,7 @@ section {
 }
 
 .recent-photos .owl-dot.active {
-  background-color: #006fbe !important;
+  background-color: var(--primary) !important;
 }
 
 .recent-photos .gallery-carousel .owl-stage-outer {
@@ -713,7 +706,7 @@ section {
   margin: -10px;
   box-sizing: content-box;
   padding: 4px;
-  background: #fff;
+  background: var(--white);
   z-index: 1;
 }
 
@@ -793,7 +786,7 @@ section {
 .story-intro .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #006fbe;
+  color: var(--primary);
 }
 
 .story-intro .content p:last-child {
@@ -824,7 +817,7 @@ section {
 .featured-members .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #006fbe;
+  color: var(--primary);
 }
 
 .featured-members .content p:last-child {
@@ -835,7 +828,7 @@ section {
 # Members
 --------------------------------------------------------------*/
 .members {
-  background: #fff;
+  background: var(--white);
   padding: 60px 0;
 }
 
@@ -863,14 +856,14 @@ section {
 
 .members .member .social a {
   transition: color 0.3s;
-  color: #fff;
+  color: var(--white);
   margin: 0 10px;
   padding-top: 8px;
   display: inline-block;
 }
 
 .members .member .social a:hover {
-  color: #006fbe;
+  color: var(--primary);
 }
 
 .members .member .social i {
@@ -890,7 +883,7 @@ section {
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 15px;
-  color: #006fbe;
+  color: var(--primary);
 }
 
 .members .member .member-info p {
@@ -931,8 +924,8 @@ section {
 
 .event-list .card-body {
   z-index: 10;
-  background: #fff;
-  border-top: 4px solid #fff;
+  background: var(--white);
+  border-top: 4px solid var(--white);
   padding: 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   margin-top: -60px;
@@ -943,11 +936,11 @@ section {
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
-  color: #24325d;
+  color: var(--secondary);
 }
 
 .event-list .card-title a {
-  color: #24325d;
+  color: var(--secondary);
   transition: 0.3s;
 }
 
@@ -964,7 +957,7 @@ section {
 }
 
 .event-list .read-more a:hover {
-  color: #006fbe;
+  color: var(--primary);
 }
 
 .event-list .card:hover img {
@@ -972,11 +965,11 @@ section {
 }
 
 .event-list .card:hover .card-body {
-  border-color: #006fbe;
+  border-color: var(--primary);
 }
 
 .event-list .card:hover .card-body .card-title a {
-  color: #006fbe;
+  color: var(--primary);
 }
 
 /*--------------------------------------------------------------
@@ -1009,7 +1002,7 @@ section {
 
 .gallery #gallery-flters li:hover,
 .gallery #gallery-flters li.filter-active {
-  color: #006fbe;
+  color: var(--primary);
 }
 
 .gallery #gallery-flters li:last-child {
@@ -1061,8 +1054,8 @@ section {
   position: absolute;
   top: 35px;
   left: 35px;
-  border-top: 3px solid #fff;
-  border-left: 3px solid #fff;
+  border-top: 3px solid var(--white);
+  border-left: 3px solid var(--white);
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -1075,20 +1068,20 @@ section {
   position: absolute;
   bottom: 35px;
   right: 35px;
-  border-bottom: 3px solid #fff;
-  border-right: 3px solid #fff;
+  border-bottom: 3px solid var(--white);
+  border-right: 3px solid var(--white);
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
 
 .gallery .gallery-wrap .gallery-info h4 {
   font-size: 20px;
-  color: #fff;
+  color: var(--white);
   font-weight: 600;
 }
 
 .gallery .gallery-wrap .gallery-info p {
-  color: #ffffff;
+  color: var(--white);
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
@@ -1101,7 +1094,7 @@ section {
 }
 
 .gallery .gallery-wrap .gallery-links a {
-  color: #fff;
+  color: var(--white);
   margin: 0 2px;
   font-size: 28px;
   display: inline-block;
@@ -1109,7 +1102,7 @@ section {
 }
 
 .gallery .gallery-wrap .gallery-links a:hover {
-  color: #25a4ff;
+  color: var(--primary);
 }
 
 .gallery .gallery-wrap:hover::before {
@@ -1139,12 +1132,12 @@ section {
 --------------------------------------------------------------*/
 .contact-us .info {
   width: 100%;
-  background: #fff;
+  background: var(--white);
 }
 
 .contact-us .info i {
   font-size: 20px;
-  color: #006fbe;
+  color: var(--primary);
   float: left;
   width: 44px;
   height: 44px;
@@ -1161,7 +1154,7 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #24325d;
+  color: var(--secondary);
 }
 
 .contact-us .info p {
@@ -1179,13 +1172,13 @@ section {
 .contact-us .info .email:hover i,
 .contact-us .info .address:hover i,
 .contact-us .info .phone:hover i {
-  background: #006fbe;
-  color: #fff;
+  background: var(--primary);
+  color: var(--white);
 }
 
 .contact-us .php-email-form {
   width: 100%;
-  background: #fff;
+  background: var(--white);
 }
 
 .contact-us .php-email-form .form-group {
@@ -1202,7 +1195,7 @@ section {
 
 .contact-us .php-email-form .error-message {
   display: none;
-  color: #fff;
+  color: var(--white);
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
@@ -1215,7 +1208,7 @@ section {
 
 .contact-us .php-email-form .sent-message {
   display: none;
-  color: #fff;
+  color: var(--white);
   background: #18d26e;
   text-align: center;
   padding: 15px;
@@ -1224,7 +1217,7 @@ section {
 
 .contact-us .php-email-form .loading {
   display: none;
-  background: #fff;
+  background: var(--white);
   text-align: center;
   padding: 15px;
 }
@@ -1250,7 +1243,7 @@ section {
 
 .contact-us .php-email-form input:focus,
 .contact-us .php-email-form textarea:focus {
-  border-color: #006fbe;
+  border-color: var(--primary);
 }
 
 .contact-us .php-email-form input {
@@ -1262,16 +1255,16 @@ section {
 }
 
 .contact-us .php-email-form button[type=submit] {
-  background: #006fbe;
+  background: var(--primary);
   border: 0;
   padding: 10px 30px;
-  color: #fff;
+  color: var(--white);
   transition: 0.4s;
   border-radius: 4px;
 }
 
 .contact-us .php-email-form button[type=submit]:hover {
-  background: #007ed8;
+  background: var(--primary);
 }
 
 @keyframes animate-loading {
@@ -1288,8 +1281,8 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #1d284b;
-  color: #fff;
+  background: var(--secondary);
+  color: var(--white);
   font-size: 14px;
   text-align: center;
   padding: 30px 0;
@@ -1298,11 +1291,17 @@ section {
 #footer h3 {
   font-size: 36px;
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
   position: relative;
   font-family: "Poppins", sans-serif;
   padding: 0;
   margin: 0 0 15px 0;
+}
+
+#footer .footer-logo img {
+  max-width: 20rem;
+  width: 100%;
+  padding: 2rem;
 }
 
 #footer p {
@@ -1319,8 +1318,8 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #006fbe;
-  color: #fff;
+  background: var(--primary);
+  color: var(--white);
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1332,8 +1331,8 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #007ed8;
-  color: #fff;
+  background: var(--primary);
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -1346,10 +1345,10 @@ section {
 }
 
 #footer .credits a {
-  color: #006fbe;
+  color: var(--primary);
   transition: 0.3s;
 }
 
 #footer .credits a:hover {
-  color: #008df1;
+  color: var(--primary);
 }
