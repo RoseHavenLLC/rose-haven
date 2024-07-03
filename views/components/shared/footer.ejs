@@ -14,8 +14,11 @@
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
       <div class="copyright">
-        &copy; Copyright <strong><span>RoseHaven</span></strong>. All Rights Reserved.
+        &copy; Copyright <strong><span>RoseHaven <span id="year"></span></span></strong>. All Rights Reserved.
       </div>
+      <script>
+        document.getElementById('year').innerHTML = new Date().getFullYear();
+      </script>
       <div class="credits">
         <p class="light">Developed by <a href="https://visoroy.com/">Visoroy Innovations</a></p>
       </div>
