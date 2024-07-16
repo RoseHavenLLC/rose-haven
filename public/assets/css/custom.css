@@ -1,0 +1,164 @@
+/* Blog Single Styles */
+.blog-single {
+    padding: 40px 0;
+}
+
+.blog-single .entry {
+    margin-bottom: 40px;
+}
+
+.blog-single .entry-img {
+    margin-bottom: 20px;
+}
+
+.blog-single h2.entry-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.blog-single .entry-meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.blog-single .entry-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.blog-single .entry-content ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.blog-single .entry-content h3 {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.sidebar {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.sidebar-item {
+    margin-bottom: 20px;
+}
+
+.sidebar-item.search-form form {
+    display: flex;
+    justify-content: flex-start; /* Aligns items to the start */
+}
+
+.sidebar-item.search-form input {
+    width: calc(100% - 45px); /* Full width minus button width and margin */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px; /* Space between input and button */
+}
+
+.sidebar-item.search-form button {
+    padding: 10px 15px;
+    background: orange; /* Change to orange */
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sidebar-item.search-form button:hover {
+    background: darkorange; /* Darker shade on hover */
+}
+
+.sidebar-item.categories ul,
+.sidebar-item.recent-posts .post-item {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.sidebar-item.categories ul li a {
+    transition: color 0.3s;
+}
+
+.sidebar-item.categories ul li a:hover {
+    color: #41C9E2; /* Hover color */
+}
+
+.sidebar-item.categories ul li a:hover::before {
+    color: #41C9E2; /* Hyphen color on hover */
+    content: "— "; /* Add hyphen */
+}
+
+.sidebar-item.tags ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 0;
+}
+
+.sidebar-item.tags ul li {
+    list-style-type: none;
+}
+
+.sidebar-item.tags ul li a {
+    background: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s; /* Transition for smooth hover */
+}
+
+.sidebar-item.tags ul li a:hover {
+    background: #d0d0d0; /* Background change on hover */
+    color: #41C9E2; /* Text color on hover */
+}
+
+.sidebar-item.recent-posts .post-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Increased margin for better separation */
+}
+
+.sidebar-item.recent-posts .post-item img {
+    margin-right: 15px; /* Increased margin for space between image and text */
+    border-radius: 4px;
+    width: 80px; /* Fixed width for consistent sizing */
+    height: 80px; /* Fixed height for consistent sizing */
+}
+
+.sidebar-item.recent-posts .post-item h4 {
+    margin: 0; /* Remove default margin */
+    font-size: 1rem; /* Adjust font size for better readability */
+    flex-grow: 1; /* Allow the title to take remaining space */
+    transition: color 0.3s; /* Transition for smooth hover */
+}
+
+.sidebar-item.recent-posts .post-item h4 a:hover {
+    color: #41C9E2; /* Hover color for recent posts */
+}
+
+.sidebar-item.recent-posts .post-item time {
+    font-size: 0.9rem; /* Slightly smaller font size for date */
+    color: #777; /* Change color for contrast */
+}
+
+
+/* messages */
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
