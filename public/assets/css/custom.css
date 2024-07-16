@@ -152,13 +152,3 @@
     font-size: 0.9rem; /* Slightly smaller font size for date */
     color: #777; /* Change color for contrast */
 }
-
-
-/* messages */
-.d-none {
-    display: none;
-}
-
-.d-block {
-    display: block;
-}

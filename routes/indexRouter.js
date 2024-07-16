@@ -45,11 +45,12 @@ indexRouter.post('/contact', (req, res) => {
 
     // Check if fields are empty
     if (!name || !email || !subject || !message) {
-        return res.status(400).send('All fields are required');
+        console.log(`Error: some fields are empty`);
+        return res.status(400).json({ error: 'All fields are required' });
     }
 
     const mailOptions = {
-        from: email,
+        from: process.env.EMAIL_ID,
         to: process.env.EMAIL_ID,
         subject: subject,
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
@@ -58,12 +59,11 @@ indexRouter.post('/contact', (req, res) => {
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.log('Error sending email:', error);
-            return res.status(500).send('Error sending email');
+            return res.status(500).json({ error: 'Error sending email' });
         }
-        res.status(200).send('Email sent: ' + info.response);
+        res.status(200).json({ message: 'Email sent: ' + info.response });
     });
 });
-
 
 
 module.exports = indexRouter;

@@ -11,12 +11,12 @@ let transporter = nodemailer.createTransport({
     }
 });
 
-transporter.verify((error, success) => {
-    if (error) {
-        console.log('Error connecting to email server:', error);
-    } else {
-        console.log('Server is ready to take our messages:', success);
-    }
-});
+// transporter.verify((error, success) => {
+//     if (error) {
+//         console.log('Error connecting to email server:', error);
+//     } else {
+//         console.log('Server is ready to take our messages:', success);
+//     }
+// });
 
 module.exports = transporter;
