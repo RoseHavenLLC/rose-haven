@@ -4,7 +4,6 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const start = require("./utils/startServer");
 
-
 // import routers
 const indexRouter = require("./routes/indexRouter");
 
@@ -18,8 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
-app.use("/", indexRouter); 
+app.use("/", indexRouter);
 
 // Start server
 start(app);

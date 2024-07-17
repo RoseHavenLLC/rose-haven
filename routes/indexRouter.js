@@ -65,5 +65,4 @@ indexRouter.post('/contact', (req, res) => {
     });
 });
 
-
 module.exports = indexRouter;
