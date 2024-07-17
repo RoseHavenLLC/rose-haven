@@ -38,31 +38,58 @@ indexRouter.get('/contact', (req, res) => {
     });
 });
 
-indexRouter.post('/contact', (req, res) => {
-    const { name, email, subject, message } = req.body;
+indexRouter.post('/contact', async (req, res) => {
+    const { name, email, subject, message, 'g-recaptcha-response': recaptchaResponse } = req.body;
 
     console.log('Request Body:', req.body); // Add this line to debug
 
     // Check if fields are empty
-    if (!name || !email || !subject || !message) {
+    if (!name || !email || !subject || !message || !recaptchaResponse) {
         console.log(`Error: some fields are empty`);
         return res.status(400).json({ error: 'All fields are required' });
     }
 
-    const mailOptions = {
-        from: process.env.EMAIL_ID,
-        to: process.env.EMAIL_ID,
-        subject: subject,
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-    };
+    // Dynamic import of node-fetch
+    const fetch = (await import('node-fetch')).default;
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.log('Error sending email:', error);
-            return res.status(500).json({ error: 'Error sending email' });
+    // Verify reCAPTCHA
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+    const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaResponse}`;
+
+    try {
+        const response = await fetch(verificationUrl, { method: 'POST' });
+        const verification = await response.json();
+
+        if (!verification.success) {
+            console.log('reCAPTCHA verification failed:', verification);
+            return res.status(400).json({ error: 'reCAPTCHA verification failed' });
         }
-        res.status(200).json({ message: 'Email sent: ' + info.response });
-    });
+
+        const mailOptions = {
+            from: process.env.EMAIL_ID,
+            to: process.env.EMAIL_ID,
+            subject: subject,
+            text: `New enquiry on Rose Haven Website\n\nFrom: ${name}\nEmail: ${email}\nMessage: ${message}`,
+            html: `
+                <h1>New enquiry on Rose Haven Website</h1><br>
+                <p><strong>From:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Message:</strong> ${message}</p>
+            `
+        };
+
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.log('Error sending email:', error);
+                return res.status(500).json({ error: 'Error sending email' });
+            }
+            res.status(200).json({ message: 'Email sent: ' + info.response });
+        });
+
+    } catch (error) {
+        console.log('Error verifying reCAPTCHA:', error);
+        res.status(500).json({ error: 'Error verifying reCAPTCHA' });
+    }
 });
 
 module.exports = indexRouter;
